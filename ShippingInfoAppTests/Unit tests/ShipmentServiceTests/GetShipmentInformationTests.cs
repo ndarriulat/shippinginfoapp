@@ -5,7 +5,7 @@ using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShippingInfoApp.Logic;
 using ShippingInfoApp.Models;
 
-namespace ShippingInfoAppTests.Unit_tests
+namespace ShippingInfoAppTests.Unit_tests.ShipmentServiceTests
 {
     [TestClass]
     public class GetShipmentInformationTests

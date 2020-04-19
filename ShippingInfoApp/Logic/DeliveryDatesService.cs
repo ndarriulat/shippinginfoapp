@@ -9,7 +9,15 @@ namespace ShippingInfoApp.Logic
 {
     public class DeliveryDatesService
     {
-        public DateTime CalculateDeliveryDateFromDeliveryItems(IEnumerable<string> itemsNames, IList<Product> products, string supplier, string region)
+        /// <summary>
+        /// Returns the maximum delivery date, given a list of items
+        /// </summary>
+        /// <param name="itemsNames">List of items from where to get the maximum delivery date</param>
+        /// <param name="products">Products original list, used to get more information about each item</param>
+        /// <param name="supplier"></param>
+        /// <param name="region"></param>
+        /// <returns></returns>
+        public DateTime GetDeliveryDateFromDeliveryItems(IEnumerable<string> itemsNames, IList<Product> products, string supplier, string region)
         {
             int maximumDeliveryDays = GetMaximumDeliveryDays(itemsNames, products, supplier, region);
             DateTime deliveryDate = DateTime.Now.AddDays(maximumDeliveryDays);
@@ -21,6 +29,8 @@ namespace ShippingInfoApp.Logic
         /// </summary>
         /// <param name="itemsNames">List of items from where to get the maximum</param>
         /// <param name="products">Products original list, used to get more information about each item</param>
+        /// <param name="supplier"></param>
+        /// <param name="region"></param>
         /// <returns></returns>
         public int GetMaximumDeliveryDays(IEnumerable<string> itemsNames, IList<Product> products, string supplier, string region)
         {
@@ -40,6 +50,8 @@ namespace ShippingInfoApp.Logic
         /// Gets the amount of delivery days for a given product name, supplier and region
         /// </summary>
         /// <param name="products">Provided list of products in which to search</param>
+        /// <param name="supplier"></param>
+        /// <param name="region"></param>
         /// <returns></returns>
         public int GetDeliveryDays(IList<Product> products, string productName, string supplier, string region)
         {
@@ -54,9 +66,9 @@ namespace ShippingInfoApp.Logic
             return deliveryDays;
         }
 
-        private static Product GetProductWithGivenName(IList<Product> products, string supplier, string itemName)
+        private static Product GetProductWithGivenName(IList<Product> products, string supplier, string productNameToSearch)
         {
-            return products.SingleOrDefault(p => p.Name == itemName && p.Supplier == supplier);
+            return products.SingleOrDefault(p => p.Name == productNameToSearch && p.Supplier == supplier);
         }
     }
 }
