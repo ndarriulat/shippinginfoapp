@@ -20,14 +20,34 @@ namespace ShippingInfoAppTests.Unit_tests
             var result = shipmentService.GetShipmentInformation(region, products);
 
             Assert.IsNull(result);
-        } 
-        
+        }
+
         [TestMethod]
         public void ShipmentInformationHasCorrectAmountTest()
         {
             ShipmentService shipmentService = new ShipmentService();
-            string region = "";
-            IList<Product> products = null;
+            string region = "eu";
+            IList<Product> products = new List<Product>()
+            {
+                new Product("black_mug",
+                            "Shirts4U",
+                            new Dictionary<string, int>()
+                            {
+                                {"eu",1 },
+                                {"us",6 },
+                                {"uk",2 }
+                            },
+                            3),
+                new Product("blue_t-shirt",
+                            "Best Tshirts",
+                            new Dictionary<string,int>()
+                            {
+                                {"eu", 1 },
+                                {"us", 5 },
+                                {"uk", 2 }
+                            },
+                            10)
+            };
 
             var result = shipmentService.GetShipmentInformation(region, products);
 
@@ -44,8 +64,7 @@ namespace ShippingInfoAppTests.Unit_tests
 
             var result = shipmentService.GetShipmentInformation(region, products);
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual(products.Count, 2);
+            Assert.Fail();
         } 
         
         [TestMethod]
@@ -57,8 +76,7 @@ namespace ShippingInfoAppTests.Unit_tests
 
             var result = shipmentService.GetShipmentInformation(region, products);
 
-            Assert.IsNotNull(result);
-            Assert.AreEqual(products.Count, 2);
+            Assert.Fail();
         }
     }
 }
