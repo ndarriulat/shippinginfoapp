@@ -1,0 +1,31 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.29920.165
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingInfoAppTests", "ShippingInfoAppTests\ShippingInfoAppTests.csproj", "{8B0A1BB7-53B6-4503-8811-28DD5FFD7952}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ShippingInfoApp", "ShippingInfoApp\ShippingInfoApp.csproj", "{B9F9C2B7-78EA-4ACD-9BE7-996CC797817B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{8B0A1BB7-53B6-4503-8811-28DD5FFD7952}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{8B0A1BB7-53B6-4503-8811-28DD5FFD7952}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{8B0A1BB7-53B6-4503-8811-28DD5FFD7952}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{8B0A1BB7-53B6-4503-8811-28DD5FFD7952}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B9F9C2B7-78EA-4ACD-9BE7-996CC797817B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B9F9C2B7-78EA-4ACD-9BE7-996CC797817B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B9F9C2B7-78EA-4ACD-9BE7-996CC797817B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B9F9C2B7-78EA-4ACD-9BE7-996CC797817B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {4B5740D1-991D-4433-9E79-33B712BD5B6F}
+	EndGlobalSection
+EndGlobal

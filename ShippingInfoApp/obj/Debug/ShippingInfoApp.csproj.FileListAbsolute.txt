@@ -1,0 +1,7 @@
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\bin\Debug\ShippingInfoApp.exe.config
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\bin\Debug\ShippingInfoApp.exe
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\bin\Debug\ShippingInfoApp.pdb
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\obj\Debug\ShippingInfoApp.csprojAssemblyReference.cache
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\obj\Debug\ShippingInfoApp.csproj.CoreCompileInputs.cache
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\obj\Debug\ShippingInfoApp.exe
+C:\Users\nicol\source\repos\ShippingInfoApp\ShippingInfoApp\obj\Debug\ShippingInfoApp.pdb
