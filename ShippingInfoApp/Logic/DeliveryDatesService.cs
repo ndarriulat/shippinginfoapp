@@ -17,14 +17,14 @@ namespace ShippingInfoApp.Logic
         }
 
         /// <summary>
-        /// Gets the maximum delivery days value from all the items in the given list
+        /// Gets the maximum delivery days value from all the items with the same supplier and region, in the given list
         /// </summary>
         /// <param name="itemsNames">List of items from where to get the maximum</param>
         /// <param name="products">Products original list, used to get more information about each item</param>
         /// <returns></returns>
         public int GetMaximumDeliveryDays(IEnumerable<string> itemsNames, IList<Product> products, string supplier, string region)
         {
-            int maximumDeliveryDays = 0;
+            int maximumDeliveryDays = -1;
             foreach (var itemName in itemsNames)
             {
                 int deliveryDays = GetDeliveryDays(products, itemName, supplier, region);
@@ -45,8 +45,12 @@ namespace ShippingInfoApp.Logic
         {
             Product productWithGivenName = GetProductWithGivenName(products, supplier, productName);
 
-            int deliveryDays = 0;
+            int deliveryDays = -1;
             productWithGivenName?.DeliveryTimes.TryGetValue(region, out deliveryDays);
+            if (deliveryDays == 0)
+            {
+                deliveryDays = -1;
+            }
             return deliveryDays;
         }
 
