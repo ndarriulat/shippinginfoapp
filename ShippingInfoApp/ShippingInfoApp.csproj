@@ -43,9 +43,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Logic\DeliveryDatesService.cs" />
     <Compile Include="Logic\ShipmentService.cs" />
     <Compile Include="Models\Product.cs" />
-    <Compile Include="Models\ShipmentInformation.cs" />
+    <Compile Include="Models\Shipment.cs" />
+    <Compile Include="Models\DeliveryInformation.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

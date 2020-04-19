@@ -16,15 +16,12 @@ namespace ShippingInfoApp.Logic
             return deliveryDate;
         }
 
-        public static int GetMaximumDeliveryDays(Dictionary<string, int> deliveryItemsCounts, IList<Product> products, string region)
+        public static int GetMaximumDeliveryDays(Dictionary<string, int> deliveryItemsStocks, IList<Product> products, string region)
         {
             int maximumDeliveryDays = 0;
-            foreach (var item in deliveryItemsCounts)
+            foreach (var itemName in deliveryItemsStocks.Select(item => item.Key))
             {
-                if (item.Value > maximumDeliveryDays)
-                {
-                    maximumDeliveryDays = item.Value;
-                }
+                
             }
             return maximumDeliveryDays;
         }
