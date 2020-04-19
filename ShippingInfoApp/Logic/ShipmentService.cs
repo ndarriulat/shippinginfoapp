@@ -9,6 +9,13 @@ namespace ShippingInfoApp.Logic
 {
     public class ShipmentService
     {
+        private readonly DeliveryDatesService deliveryDatesService;
+
+        public ShipmentService(DeliveryDatesService _deliveryDatesService)
+        {
+            deliveryDatesService = _deliveryDatesService;
+        }
+
         public DeliveryInformation GetShipmentInformation(string region, IList<Product> products)
         {
             DeliveryInformation deliveryInformation = new DeliveryInformation();
@@ -18,7 +25,7 @@ namespace ShippingInfoApp.Logic
             return deliveryInformation;
         }
 
-        private static void SetProductsFromRegion(IList<Shipment> shipments, string region, IList<Product> products)
+        private void SetProductsFromRegion(IList<Shipment> shipments, string region, IList<Product> products)
         {
             foreach (Product product in products)
             {
@@ -39,7 +46,8 @@ namespace ShippingInfoApp.Logic
             }
             foreach (Shipment shipment in shipments)
             {
-                shipment.DeliveryDate = CalculateDeliveryDateFromDeliveryItems(shipment.Items);
+                IEnumerable<string> shipmentItemsNames = shipment.Items.Select(i => i.Key);
+                shipment.DeliveryDate = deliveryDatesService.CalculateDeliveryDateFromDeliveryItems(shipmentItemsNames, products, shipment.Supplier, region);
             }
         }
 

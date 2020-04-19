@@ -52,7 +52,9 @@
   <ItemGroup>
     <Compile Include="Integration tests\DatabaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Unit tests\ShipmentServiceTests.cs" />
+    <Compile Include="Unit tests\DeliveryDatesServiceTests\GetMaximumDeliveryDaysTests.cs" />
+    <Compile Include="Unit tests\GetShipmentInformationTests.cs" />
+    <Compile Include="Unit tests\DeliveryDatesServiceTests\GetDeliveryDaysTests.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

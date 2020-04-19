@@ -9,21 +9,50 @@ namespace ShippingInfoApp.Logic
 {
     public class DeliveryDatesService
     {
-        public static DateTime CalculateDeliveryDateFromDeliveryItems(Dictionary<string, int> deliveryItemsStocks, IList<Product> products, string region)
+        public DateTime CalculateDeliveryDateFromDeliveryItems(IEnumerable<string> itemsNames, IList<Product> products, string supplier, string region)
         {
-            int maximumDeliveryDays = GetMaximumDeliveryDays(deliveryItemsStocks, products, region);
+            int maximumDeliveryDays = GetMaximumDeliveryDays(itemsNames, products, supplier, region);
             DateTime deliveryDate = DateTime.Now.AddDays(maximumDeliveryDays);
             return deliveryDate;
         }
 
-        public static int GetMaximumDeliveryDays(Dictionary<string, int> deliveryItemsStocks, IList<Product> products, string region)
+        /// <summary>
+        /// Gets the maximum delivery days value from all the items in the given list
+        /// </summary>
+        /// <param name="itemsNames">List of items from where to get the maximum</param>
+        /// <param name="products">Products original list, used to get more information about each item</param>
+        /// <returns></returns>
+        public int GetMaximumDeliveryDays(IEnumerable<string> itemsNames, IList<Product> products, string supplier, string region)
         {
             int maximumDeliveryDays = 0;
-            foreach (var itemName in deliveryItemsStocks.Select(item => item.Key))
+            foreach (var itemName in itemsNames)
             {
-                
+                int deliveryDays = GetDeliveryDays(products, itemName, supplier, region);
+                if (deliveryDays > maximumDeliveryDays)
+                {
+                    maximumDeliveryDays = deliveryDays;
+                }
             }
             return maximumDeliveryDays;
+        }
+
+        /// <summary>
+        /// Gets the amount of delivery days for a given product name, supplier and region
+        /// </summary>
+        /// <param name="products">Provided list of products in which to search</param>
+        /// <returns></returns>
+        public int GetDeliveryDays(IList<Product> products, string productName, string supplier, string region)
+        {
+            Product productWithGivenName = GetProductWithGivenName(products, supplier, productName);
+
+            int deliveryDays = 0;
+            productWithGivenName?.DeliveryTimes.TryGetValue(region, out deliveryDays);
+            return deliveryDays;
+        }
+
+        private static Product GetProductWithGivenName(IList<Product> products, string supplier, string itemName)
+        {
+            return products.SingleOrDefault(p => p.Name == itemName && p.Supplier == supplier);
         }
     }
 }

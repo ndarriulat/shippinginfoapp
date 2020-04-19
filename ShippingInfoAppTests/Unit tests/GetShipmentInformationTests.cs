@@ -8,12 +8,12 @@ using ShippingInfoApp.Models;
 namespace ShippingInfoAppTests.Unit_tests
 {
     [TestClass]
-    public class ShipmentServiceTests
+    public class GetShipmentInformationTests
     {
         [TestMethod]
         public void ShipmentInformationWithNoGivenRegionAndProductsTest()
         {
-            ShipmentService shipmentService = new ShipmentService();
+            ShipmentService shipmentService = new ShipmentService(new DeliveryDatesService());
             string region = "";
             IList<Product> products = null;
 
@@ -25,7 +25,7 @@ namespace ShippingInfoAppTests.Unit_tests
         [TestMethod]
         public void ShipmentInformationHasCorrectAmountTest()
         {
-            ShipmentService shipmentService = new ShipmentService();
+            ShipmentService shipmentService = new ShipmentService(new DeliveryDatesService());
             string region = "eu";
             IList<Product> products = new List<Product>()
             {
@@ -58,7 +58,7 @@ namespace ShippingInfoAppTests.Unit_tests
         [TestMethod]
         public void ExceptionIsThrownWhenDeliveryTimesAreEmptyTest()
         {
-            ShipmentService shipmentService = new ShipmentService();
+            ShipmentService shipmentService = new ShipmentService(new DeliveryDatesService());
             string region = "";
             IList<Product> products = null;
 
@@ -70,7 +70,7 @@ namespace ShippingInfoAppTests.Unit_tests
         [TestMethod]
         public void ExceptionIsThrownWhenProductNameIsEmptyTest()
         {
-            ShipmentService shipmentService = new ShipmentService();
+            ShipmentService shipmentService = new ShipmentService(new DeliveryDatesService());
             string region = "";
             IList<Product> products = null;
 
