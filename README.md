@@ -10,20 +10,15 @@ As you will see in the code, I prefer not commenting much (except on one class i
 
 Overall, I am quite happy with the code quality, however, I do believe that could have been much better. Still, as I didn't want to expend more time since I was already given some extra time to deliver it, I preferred not to take more time on working on this. 
 
-That's why, I wrote a list with all the improvement points that I thought of:
-- The method SetSuppliersDeliveryDates it's quite coupled with SetShipmentList and the DeliveryDatesService, and it was not very straightforward to think of isolated unit tests for that one.
-- In addition to that, in any case, the Suppliers delivery dates should have been calculated within the foreach of the SetShipmentList. I preferred to keep on testing the logic rather than thinking an alternative for that.
+That's why, I wrote a list with the **improvement points** that I thought of:
+- The method `SetSuppliersDeliveryDates` is quite coupled with `SetShipmentList` and the `DeliveryDatesService`, and it was not very straightforward to think of isolated unit tests for that one.
+- In addition to that, in any case, the Suppliers delivery dates should have been calculated within the foreach of the `SetShipmentList`. I preferred to keep on testing the logic rather than thinking an alternative for that.
 - Countries and Suppliers should have been enums and not strings, and maybe Product names too. I would have definetly done that if continued working on this.
 - Test data should have been stored in a resource file within the solution. The code from the method ProductDataSet was repeated quite a lot. Sorry about that one!
 - Dictionaries could have been Lists of models. I went for the first option in order to save time.
-- The parameters (IList<Shipment> shipments, string region, IList<Product> products) were passed through multiple method. I could have created a sort of DTO to simplify that.
+- The parameters `(IList<Shipment> shipments, string region, IList<Product> products)` were passed through multiple methods. I could have created a sort of DTO to simplify that.
 - Instead of using a list of Products, I could have used a CSV file as an input, but I found it not that relevant to invest time on mapping the lines of that file to objects in the code.
   
   That's all! I am looking forward to your feedback!
-
-
-
-
-
 
 
