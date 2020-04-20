@@ -2,7 +2,7 @@
 
 Welcome to my ShippingInfoApp!
 
-Hope you find the code quality and cleanness as good as I do :)
+Hope you find the code with good quality and cleanness as I do :)
 
 I would like to start stating that this project does not fully cover the 4 scenarios presented in the Moteefe Coding Challenge. The reason for this is that I didn't quite understand Scenario 3 and 4, and since it was Sunday and I did not have anybody to ask to, I thought it would be better to focus on the Unit & Integration tests and code quality rather than modifying the logic of the program. I hope you can understand that approach that I followed.
 
