@@ -70,15 +70,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Integration tests\DatabaseTests.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Unit tests\DeliveryDatesServiceTests\GetMaximumDeliveryDaysTests.cs" />
     <Compile Include="Unit tests\DeliveryDatesServiceTests\GetDeliveryDateFromDeliveryItemsTests.cs" />
     <Compile Include="Unit tests\DeliveryDatesServiceTests\SetFinalDeliveryDateTests.cs" />
-    <Compile Include="Unit tests\ShipmentServiceTests\GetShipmentInformationTests.cs" />
+    <Compile Include="Integration tests\GetShipmentInformationTests.cs" />
     <Compile Include="Unit tests\DeliveryDatesServiceTests\GetDeliveryDaysTests.cs" />
     <Compile Include="Unit tests\ShipmentServiceTests\SetShipmentListTests.cs" />
-    <Compile Include="Unit tests\ShipmentServiceTests\SetSuppliersDeliveryDates.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />

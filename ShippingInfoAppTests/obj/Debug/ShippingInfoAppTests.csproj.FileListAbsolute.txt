@@ -32,3 +32,16 @@ C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\obj\Debug\Ship
 C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\obj\Debug\ShippingInfoAppTests.csproj.CopyComplete
 C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\obj\Debug\ShippingInfoAppTests.dll
 C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\obj\Debug\ShippingInfoAppTests.pdb
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\Castle.Core.dll
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\Moq.dll
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\Castle.Core.xml
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\Moq.xml
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\nunit.framework.dll
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\nunit.framework.pdb
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\nunit.framework.xml
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\FakeItEasy.dll
+C:\Users\nicol\source\repos\shippinginfoapp2\ShippingInfoAppTests\bin\Debug\FakeItEasy.xml

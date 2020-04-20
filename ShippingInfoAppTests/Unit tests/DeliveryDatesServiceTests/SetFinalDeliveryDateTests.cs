@@ -49,7 +49,6 @@ namespace ShippingInfoAppTests.Unit_tests.DeliveryDatesServiceTests
         [ExpectedException(typeof(NullReferenceException))]
         public void SetFinalDeliveryDateWhenNullShipmentsTest()
         {
-            DateTime expectedDateTime = DateTime.MinValue;
             IList<Shipment> shipments = null;
 
             DeliveryInformation deliveryInformation = new DeliveryInformation() { Shipments = shipments };

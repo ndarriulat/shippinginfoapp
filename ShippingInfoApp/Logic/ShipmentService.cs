@@ -16,7 +16,7 @@ namespace ShippingInfoApp.Logic
             deliveryDatesService = _deliveryDatesService;
         }
 
-        public DeliveryInformation GetShipmentInformation(string region, IList<Product> products)
+        public DeliveryInformation GetDeliveryInformation(string region, IList<Product> products)
         {
             DeliveryInformation deliveryInformation = new DeliveryInformation();
             SetShipmentList(deliveryInformation.Shipments, region, products);

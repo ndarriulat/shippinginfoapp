@@ -10,5 +10,9 @@ namespace ShippingInfoApp.Models
     {
         public DateTime? FinalDeliveryDate { get; set; }
         public IList<Shipment> Shipments { get; set; }
+        public DeliveryInformation()
+        {
+            Shipments = new List<Shipment>();
+        }
     }
 }
