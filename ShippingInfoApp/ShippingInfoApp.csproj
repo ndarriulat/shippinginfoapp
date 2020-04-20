@@ -44,6 +44,8 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Logic\DeliveryDatesService.cs" />
+    <Compile Include="Logic\IDeliveryDatesService.cs" />
+    <Compile Include="Logic\IShipmentService.cs" />
     <Compile Include="Logic\ShipmentService.cs" />
     <Compile Include="Models\Product.cs" />
     <Compile Include="Models\Shipment.cs" />

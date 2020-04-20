@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using FakeItEasy;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 using ShippingInfoApp.Logic;
 using ShippingInfoApp.Models;
@@ -38,7 +39,7 @@ namespace ShippingInfoAppTests.Unit_tests.DeliveryDatesServiceTests
                 "black_mug",
             };
 
-            int obtainedMaximumDeliveryDays = deliveryDatesService.GetMaximumDeliveryDays(itemsNames, products, supplier: "Shirts4U", region: "xy");
+            int obtainedMaximumDeliveryDays = deliveryDatesService.GetMaximumDeliveryDays(itemsNames, products, supplier: "Shirts4U", region: A.Dummy<string>());
 
             Assert.AreEqual(expected: -1, actual: obtainedMaximumDeliveryDays);
         }
@@ -54,7 +55,7 @@ namespace ShippingInfoAppTests.Unit_tests.DeliveryDatesServiceTests
                 "black_mug",
             };
 
-            int obtainedMaximumDeliveryDays = deliveryDatesService.GetMaximumDeliveryDays(itemsNames, products, supplier: "fakesupplier123", region: "uk");
+            int obtainedMaximumDeliveryDays = deliveryDatesService.GetMaximumDeliveryDays(itemsNames, products, supplier: A.Dummy<string>(), region: "uk");
 
             Assert.AreEqual(expected: -1, actual: obtainedMaximumDeliveryDays);
         }

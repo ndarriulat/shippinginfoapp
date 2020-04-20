@@ -12,9 +12,9 @@ namespace ShippingInfoApp.Models
         public int ItemsInStock { get; set; }
         public Product(string name, string supplier, Dictionary<string, int> deliveryTimes, int itemsInStock)
         {
-            Name = name ?? throw new ArgumentNullException(nameof(name));
-            Supplier = supplier ?? throw new ArgumentNullException(nameof(supplier));
-            DeliveryTimes = deliveryTimes ?? throw new ArgumentNullException(nameof(deliveryTimes));
+            Name = name;
+            Supplier = supplier;
+            DeliveryTimes = deliveryTimes;
             ItemsInStock = itemsInStock;
         }
     }

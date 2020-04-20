@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace ShippingInfoApp.Logic
 {
-    public class DeliveryDatesService
+    public class DeliveryDatesService : IDeliveryDatesService
     {
         /// <summary>
         /// Returns the maximum delivery date, given a list of items
@@ -69,6 +69,24 @@ namespace ShippingInfoApp.Logic
         private static Product GetProductWithGivenName(IList<Product> products, string supplier, string productNameToSearch)
         {
             return products.SingleOrDefault(p => p.Name == productNameToSearch && p.Supplier == supplier);
+        }
+
+        /// <summary>
+        /// Sets the delivery date to a DeliveryInformation object, based on the maximum delivery date from its shipments
+        /// </summary>
+        /// <param name="deliveryInformation"></param>
+        public void SetFinalDeliveryDate(DeliveryInformation deliveryInformation)
+        {
+            DateTime? biggestDeliveryDate = DateTime.MinValue;
+            foreach (Shipment shipment in deliveryInformation.Shipments)
+            {
+                if (shipment.DeliveryDate > biggestDeliveryDate)
+                {
+                    biggestDeliveryDate = shipment.DeliveryDate;
+                }
+            }
+
+            deliveryInformation.FinalDeliveryDate = biggestDeliveryDate;
         }
     }
 }

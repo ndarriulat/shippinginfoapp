@@ -8,7 +8,7 @@ namespace ShippingInfoApp.Models
 {
     public class DeliveryInformation
     {
-        public DateTime FinalDeliveryDate { get; set; }
+        public DateTime? FinalDeliveryDate { get; set; }
         public IList<Shipment> Shipments { get; set; }
     }
 }
